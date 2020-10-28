@@ -1,0 +1,13 @@
+[Desktop Entry]
+Icon=folder-magenta
+
+[Dolphin]
+HeaderColumnWidths=345,88,126
+PreviewsShown=false
+Timestamp=2020,10,9,23,15,36
+Version=4
+ViewMode=1
+VisibleRoles=CustomizedDetails,Details_text,Details_size,Details_modificationtime
+
+[Settings]
+HiddenFilesShown=true

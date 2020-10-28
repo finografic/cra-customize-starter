@@ -1,0 +1,73 @@
+{
+  "name": "cra-customize-starter",
+  "description": "React boilerplate, including: react/cra-customize, eslint, babel, emotion",
+  "version": "0.8.0",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "·········· BUILD": "··················································",
+    "build": "react-app-rewired start",
+    "clean:build": "rimraf ./build",
+    "clean:all": "npm run clean:build",
+    "·········· TESTING:": "··················································",
+    "test": "cross-env NODE_ENV=test jest --coverage",
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "@emotion/babel-preset-css-prop": "^10.0.27",
+    "@emotion/core": "^10.0.35",
+    "@emotion/react": "^11.0.0-next.15",
+    "@emotion/styled": "^10.0.27",
+    "@loadable/component": "^5.14.1",
+    "color": "^3.1.3",
+    "dayjs": "^1.9.4",
+    "eslint": "^6.6.0",
+    "history": "4.9.0",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-helmet-async": "^1.0.7",
+    "react-remove-scroll": "^2.4.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "react-spinners": "^0.9.0",
+    "react-styled-flexboxgrid": "^3.2.1",
+    "sanitize.css": "^12.0.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "customize-cra": "^1.0.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-emotion": "^10.0.27",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "jest-cli": "^26.4.2",
+    "jest-dom": "^4.0.0",
+    "prettier": "^2.1.1",
+    "react-app-rewired": "^2.1.6",
+    "rimraf": "^3.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "last 2 versions",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 2 versions"
+    ]
+  }
+}
