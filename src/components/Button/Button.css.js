@@ -18,9 +18,8 @@ export const styles = css`
   /* border */
   border-width: 2px;
   border-style: solid;
-  margin: 0 0.1em !important;
-  /* padding: 0.33em 1em; */
-  /* border-radius: 5px; */
+  padding: 0.33em 1em;
+  border-radius: 5px;
 
   /* TEXT */
   font-size: 1em;

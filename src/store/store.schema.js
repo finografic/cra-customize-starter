@@ -1,8 +1,10 @@
 export default {
   isLoading: false,
   locale: 'en',
-  sidebar: { isOpen: false },
+  match: {},
   page: {
     title: '',
   },
+  population: [],
+  selectedProfile: {},
 };

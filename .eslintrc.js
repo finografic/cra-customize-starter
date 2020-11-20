@@ -39,5 +39,6 @@ module.exports = {
     'no-unused-vars': 1,
     'react/prop-types': 1,
     'import/no-unresolved': 1,
+    'react/display-name': 0,
   },
 };

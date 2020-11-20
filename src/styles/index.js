@@ -1,4 +1,4 @@
 export { cssGlobal } from './global';
 export { colors } from './colors';
-export { layout } from './layout';
+export { layout, theme, media } from './layout';
 export { forms } from './forms';
