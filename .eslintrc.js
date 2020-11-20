@@ -19,7 +19,7 @@ module.exports = {
     'import/resolver': {
       node: {
         moduleDirectory: ['node_modules', 'src'],
-        extensions: ['.js', '.jsx'], // ALLOW OMMISION OF THESE EXTENSIONS :)
+        extensions: ['.js', '.jsx'],
       },
       react: {
         pragma: 'React',
@@ -29,16 +29,15 @@ module.exports = {
     },
   },
   rules: {
-    // TODO: SOME RULES MAY VARY ON ENVIRONMENT ...
-    'quotes': ['error', 'single', { 'avoidEscape': true }],
-    'spaced-comment': 1,
+    'indent': ['error', 2],
+    'linebreak-style': ['error', 'unix'],
     'no-unused-vars': 1,
-    'import/no-duplicates': 1,
-    'import/no-unresolved': 1,
     'no-undef': 1,
-    'no-unused-vars': 1,
-    'react/prop-types': 1,
+    'semi': 2,
+    'spaced-comment': 1,
+    'quotes': ['error', 'single', { 'avoidEscape': true }],
     'import/no-unresolved': 1,
+    'import/no-duplicates': 1,
     'react/display-name': 0,
   },
 };
