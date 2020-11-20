@@ -18,7 +18,7 @@ export const reducer = (state = initialState, action) => {
       };
     }
 
-    case 'STORE_MATCH': {
+    case 'SET_ROUTER_MATCH': {
       return {
         ...state,
         match: action.match,
@@ -32,7 +32,7 @@ export const reducer = (state = initialState, action) => {
       };
     }
 
-    case 'SET_SELECTD': {
+    case 'SET_SELECTED': {
       action.selected.id = new String(action.selected.id);
       return {
         ...state,

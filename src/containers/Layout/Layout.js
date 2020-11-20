@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { useStore } from 'store';
+import { useRouter } from 'utils/useRouter';
 
 // LAYOUT
 import Header from 'components/Header';
@@ -13,8 +14,13 @@ import { routes } from '_config';
 const NotFound = React.lazy(() => import('containers/NotFound'));
 
 const Layout = () => {
-  const { state } = useStore();
+  const { match } = useRouter();
   const { pathname } = useLocation();
+  const { state, dispatch } = useStore();
+
+  useEffect(() => {
+    dispatch({ type: 'SET_ROUTER_MATCH', match });
+  }, []);
 
   return (
     <React.Fragment>
