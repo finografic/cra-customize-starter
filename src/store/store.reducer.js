@@ -25,19 +25,18 @@ export const reducer = (state = initialState, action) => {
       };
     }
 
-    case 'STORE_POPULATION': {
+    case 'SET_DATA': {
       return {
         ...state,
-        population: action.population,
+        data: action.data,
       };
     }
 
-    case 'SELECT_PROFILE': {
-      // FIX FOR THE JSON ENTRY WITH ID '0' (THIS VALUE SHOULD NOT BE PERMITTED)
-      action.selectedProfile.id = new String(action.selectedProfile.id);
+    case 'SET_SELECTD': {
+      action.selected.id = new String(action.selected.id);
       return {
         ...state,
-        selectedProfile: action.selectedProfile,
+        selected: action.selected,
       };
     }
 

@@ -5,6 +5,6 @@ export default {
   page: {
     title: '',
   },
-  population: [],
-  selectedProfile: {},
+  data: [],
+  selected: {},
 };
