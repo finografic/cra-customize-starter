@@ -5,7 +5,7 @@ let initialState = {
 };
 
 export const reducer = (state = initialState, action) => {
-  console.log(`REDUCER action/payload: ${action.type}: `, action.payload);
+  console.log('%cREDUCER ACTION:', 'color:yellow', action);
   switch (action.type) {
     case 'RESET': {
       return initialState;
@@ -18,10 +18,30 @@ export const reducer = (state = initialState, action) => {
       };
     }
 
-    default: {
+    case 'STORE_MATCH': {
       return {
         ...state,
+        match: action.match,
       };
+    }
+
+    case 'SET_DATA': {
+      return {
+        ...state,
+        data: action.data,
+      };
+    }
+
+    case 'SET_SELECTD': {
+      action.selected.id = new String(action.selected.id);
+      return {
+        ...state,
+        selected: action.selected,
+      };
+    }
+
+    default: {
+      throw new Error(`Unhandled reducer TYPE: ${action.type}`);
     }
   }
 };

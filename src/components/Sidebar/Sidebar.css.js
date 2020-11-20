@@ -8,7 +8,7 @@ export const styles = css`
 
   .sidebar-content-wrapper {
     position: fixed;
-    width: ${layout.sidebar.width};
+    width: calc(${layout.sidebar.width} - (${layout.padding}*2));
     padding: ${layout.padding};
     min-height: 100vh;
   }

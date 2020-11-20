@@ -1,10 +1,4 @@
 /** @jsx jsx */
-import 'sanitize.css/sanitize.css';
-import 'sanitize.css/typography.css';
-import 'sanitize.css/forms.css';
-import 'sanitize.css/assets.css';
-import 'sanitize.css/reduce-motion.css';
-// import { Global } from '@emotion/core';
 import { css } from '@emotion/core';
 import { colors } from './colors';
 import { cssLayout } from './layout';
@@ -36,7 +30,7 @@ export const cssGlobal = css`
   }
   hr {
     border: none;
-    border-bottom: 1px dotted ${colors.greyMed};
+    border-bottom: 1px dashed ${colors.greyLight};
   }
   button {
     display: flex !important;
@@ -48,17 +42,4 @@ export const cssGlobal = css`
   fieldset {
     border: 0;
   }
-
-  /* NEW !! pointer-events */
-  /* NO SAFARI SUPPORT ??? */
-  pointer-events: auto;
-  pointer-events: none; /* ALSO MAKE divs etc CLICK-THROUGH !!! */
-  pointer-events: visibleFill; /* SVG only  */
-  pointer-events: visible; /* SVG only */
-  pointer-events: fill; /* SVG only */
-
-  /* Global values */
-  pointer-events: inherit;
-  pointer-events: initial;
-  pointer-events: unset;
 `;

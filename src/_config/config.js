@@ -1,6 +1,6 @@
 export const config = {
   appName: 'Test App',
-  pageTitleSuffix: ' - Test App SUFFIX',
+  pageTitleSuffix: 'Test App',
 };
 
 export { routes } from './routes';

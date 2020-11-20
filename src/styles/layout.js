@@ -1,15 +1,70 @@
 import { css } from '@emotion/core';
 import { colors } from './colors';
 
+const fontSize = 16;
+
 // LAYOUT VARIABLES
 export const layout = {
-  padding: '15px', // ${layout.padding}: 15px;
-  borderRadius: '5px', // ${layout.padding}: 15px;
+  fontSize, // px
+  padding: '15px',
+  borderRadius: '5px',
+  header: {
+    height: '80px',
+  },
+  footer: {
+    height: '40px',
+  },
   sidebar: {
     width: '180px',
   },
-  header: {
-    height: '80px',
+};
+
+// BREAKPOINTS (px)
+export const breakpointsPX = {
+  xs: 0,
+  sm: 768,
+  md: 1024,
+  lg: 1200,
+  xl: 1600,
+};
+
+// BREAKPOINTS (em)
+export const breakpoints = {
+  xs: 0,
+  sm: Math.round(breakpointsPX.sm / fontSize),
+  md: Math.round(breakpointsPX.md / fontSize),
+  lg: Math.round(breakpointsPX.lg / fontSize),
+  xl: Math.round(breakpointsPX.xl / fontSize),
+};
+
+// MEDIA QUERIES
+export const media = (query) => {
+  const breakpointsArr = Object.keys(breakpoints).map((key) => [key, breakpoints[key]]);
+  const [result] = breakpointsArr.reduce((acc, [name, size]) => {
+    if (query === name) return [...acc, `@media (min-width: ${size}em)`];
+    return acc;
+  }, []);
+  return result;
+};
+
+// STYLED COMPONENTS THEME
+// USED BY react-styled-flexboxgrid
+export const theme = {
+  flexboxgrid: {
+    'gridSize': 12,
+    'gutterWidth': 1, // rem
+    'outerMargin': 2, // rem
+    'mediaQuery': 'only screen',
+    'container': {
+      // UNITS: 'rem'
+      'sm': Math.round(breakpoints.sm * 0.96),
+      'md': Math.round(breakpoints.md * 0.95),
+      'lg': Math.round(breakpoints.lg * 1.01),
+      // 'xl': NOT USED BY react-styled-flexboxgrid
+    },
+    'breakpoints': {
+      ...breakpoints,
+    },
   },
 };
 
@@ -39,7 +94,8 @@ export const cssLayout = css`
     background: ${colors.greyXLight};
     header + section {
       flex-grow: 1;
-      padding-top: ${layout.header.height};
+      margin-top: ${layout.header.height};
+      min-height: calc(100vh - ${layout.header.height} - ${layout.footer.height} - ${layout.padding});
     }
   }
 
@@ -50,7 +106,7 @@ export const cssLayout = css`
   }
 
   section {
-    padding: ${layout.padding} calc(${layout.padding} * 1.5);
+    padding: calc(${layout.padding} * 2) calc(${layout.padding} * 1.5);
   }
 
   article {
@@ -86,7 +142,7 @@ export const cssLayout = css`
   }
 
   .header {
-    width: calc(100% - ${layout.sidebar.width});
+    width: 100%;
     position: fixed;
     z-index: 20;
     border-bottom-width: 1px;
@@ -101,6 +157,7 @@ export const cssLayout = css`
   }
 
   .footer {
+    min-height: ${layout.footer.height};
     border-top-width: 1px;
     bottom: 0px;
   }
