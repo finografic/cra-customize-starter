@@ -9,6 +9,10 @@
     "build": "react-app-rewired start",
     "clean:build": "rimraf ./build",
     "clean:all": "npm run clean:build",
+    "·········· LINTING": "··················································",
+    "lint:eslint:new": "eslint src --fix",
+    "lint:eslint": "eslint --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
     "·········· TESTING:": "··················································",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll"

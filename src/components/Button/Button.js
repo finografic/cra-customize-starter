@@ -45,8 +45,8 @@ export const Button = ({ type = 'button', variant = 'solid', color, label, ...pr
   // GENERATE CSS, DEPENDING ON variant PROP ========================== //
 
   switch (variant) {
-    case 'outline':
-      stylesColor = css`
+  case 'outline':
+    stylesColor = css`
         & {
           background-color: ${color.alpha(0).string()};
           color: ${color.hex()};
@@ -61,9 +61,9 @@ export const Button = ({ type = 'button', variant = 'solid', color, label, ...pr
           border-color: ${color.darken(hoverFactor).hex()};
         }
       `;
-      break;
-    case 'clear':
-      stylesColor = css`
+    break;
+  case 'clear':
+    stylesColor = css`
         & {
           background-color: ${color.alpha(0).string()};
           color: ${color.hex()};
@@ -78,10 +78,10 @@ export const Button = ({ type = 'button', variant = 'solid', color, label, ...pr
           border-color: ${color.alpha(0).string()};
         }
       `;
-      break;
-    case 'solid':
-    default:
-      stylesColor = css`
+    break;
+  case 'solid':
+  default:
+    stylesColor = css`
         & {
           background-color: ${color.hex()};
           color: ${colorAlt.hex()};
@@ -95,7 +95,7 @@ export const Button = ({ type = 'button', variant = 'solid', color, label, ...pr
           color: ${colorAlt.hex()};
         }
       `;
-      break;
+    break;
   }
 
   // =============================================================== //

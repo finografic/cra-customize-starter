@@ -18,18 +18,18 @@ const Breadcrumbs = ({ match }) => {
       matchedRoute?.title && setPageTitle(matchedRoute.title);
 
       switch (true) {
-        case 'id' in params:
-          setSubTitle(`Profile ID: ${params.id}`);
-          break;
-        case 'filterKey' in params:
-          setSubTitle('filtered');
-          break;
-        case 'subtitle' in matchedRoute && matchedRoute.subtitle !== '':
-          setSubTitle(matchedRoute.subtitle);
-          break;
-        default:
-          setSubTitle('');
-          break;
+      case 'id' in params:
+        setSubTitle(`Profile ID: ${params.id}`);
+        break;
+      case 'filterKey' in params:
+        setSubTitle('filtered');
+        break;
+      case 'subtitle' in matchedRoute && matchedRoute.subtitle !== '':
+        setSubTitle(matchedRoute.subtitle);
+        break;
+      default:
+        setSubTitle('');
+        break;
       }
     }
   }, [match]);
